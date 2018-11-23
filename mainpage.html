@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="vikasicon.ico">
+    <title>Home | Dr. Mahatme</title>
+    <link rel="stylesheet" type="text/css" href="mainpage.css">
+
+    <script>
+    // Hide Header on on scroll down
+    document.onreadystatechange = function (){
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 60;
+        var navbarHeight = $('header').outerHeight();
+        $(window).scroll(function(event){
+            didScroll = true;
+        });
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+            
+            // If they scrolled down and are past the navbar, add class .nav-up.
+            // This is necessary so you never see what is "behind" the navbar.
+            if (st > navbarHeight*2){
+                // Scroll Down
+                $('header').fadeIn(300).removeClass('nav-up').addClass('nav-down');
+            } else {
+                // Scroll Up
+                if(st + $(window).height() < $(document).height()) {
+                    $('header').fadeOut(200).removeClass('nav-down').addClass('nav-up');
+                }
+            }
+            
+            lastScrollTop = st;
+        }
+    }
+    </script>
+  </head>
+  <body>
+
+        <header class="nav-up">
+                <nav class="navbar sticky-top navbar-expand-xl navbar-light">
+                        <a class="navbar-brand" href="#">
+                            <h3>        Dr. Vikas Mahatme</h3>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <div class="collapse navbar-collapse nbar" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-lg-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="mainpage.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                About
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="about.html">About me</a>
+                                <a class="dropdown-item" href="#">Vision</a>
+                                <a class="dropdown-item" href="#">with BJP</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                At Nation's Service
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a href="nation.html" class="dropdown-item" >Debates and Issues Raised In Parliament</a>
+                                <a href="nation.html" class="dropdown-item" >Achievements</a>
+                                <a href="nation.html" class="dropdown-item" >Major Initiatives</a>
+                                </div>
+                            </li>
+                
+<!--                             <li class="nav-item">
+                                <a href="journey.html" class="nav-link" >Journey</a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="news.html">News</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Gallery
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="gallery.html">Photo Gallery</a>
+                                <a class="dropdown-item" href="#">Videos</a>
+                                <a class="dropdown-item" href="#">Speeches</a>
+                                </div>
+                            </li>
+                            </ul>
+                            <form class="form-inline">
+                            <a href="https://padmshridrmahatme.blogspot.com/"><button id="blog" class="btn btn-outline-success" type="button">Blog</button></a>
+                            <a href="connect.html"><button id="join" class="btn btn-outline-success" type="button" >Connect</button></a>
+                        </form>
+                        </div>
+                    </nav>
+            </header>
+
+
+
+
+    <nav class="navbar tempnav navbar-expand-xl navbar-dark">
+            <a class="navbar-brand" href="#">
+                <h3>        Dr. Vikas Mahatme</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#tempnavbarSupportedContent" aria-controls="tempnavbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse nbar" id="tempnavbarSupportedContent">
+                <ul class="navbar-nav ml-lg-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="mainpage.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="about.html">About me</a>
+                    <a class="dropdown-item" href="#">Vision</a>
+                    <a class="dropdown-item" href="#">with BJP</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    At Nation's Service
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a href="nation.html" class="dropdown-item" >Debates and Issues Raised In Parliament</a>
+                    <a href="nation.html" class="dropdown-item" >Achievements</a>
+                    <a href="nation.html" class="dropdown-item" >Major Initiatives</a>
+                    </div>
+                </li>
+
+<!--                 <li class="nav-item">
+                    <a href="journey.html" class="nav-link" >Journey</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html">News</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Gallery
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="gallery.html">Photo Gallery</a>
+                    <a class="dropdown-item" href="#">Videos</a>
+                    <a class="dropdown-item" href="#">Speeches</a>
+                    </div>
+                </li>
+                </ul>
+                <form class="form-inline">
+                <a href="https://padmshridrmahatme.blogspot.com/"><button id="blog" class="btn btn-outline-success" type="button">Blog</button></a>
+                <a href="connect.html"><button id="join" class="btn btn-outline-success" type="button" >Connect</button></a>
+            </form>
+            </div>
+        </nav>
+
+
+    
+    <div id="theCarousel" class="carousel slide" data-ride="carousel">
+      
+
+      <ol class="carousel-indicators">
+        <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#theCarousel" data-slide-to="1"></li>
+        <li data-target="#theCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+  <div class="centered111">
+    <h5 >Join Dr.Vikas Mahatme</h5> 
+      <h2 >Youth in policy</h2> 
+    </div>
+    <div class="imgcontainer">
+    <img class="d-block w-100" src="images/pic1.jpg?noresize" max-height=652px alt="First slide">
+    </div>
+<!--         <h4>Column 1</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla at libero at finibus. Mauris dui felis, sagittis in dapibus eget, porta quis elit. Donec sodales placerat porta. Vivamus laoreet magna eget facilisis condimentum. Donec porttitor elit nibh, et mollis nunc egestas at. Vestibulum tristique vehicula ligula vel mollis. Quisque ante lectus, tincidunt maximus scelerisque in, molestie nec eros. Vestibulum finibus, lacus at gravida condimentum, tellus mauris imperdiet orci.
+          </p>
+ --><!--         <div class="carousel-caption d-none d-md-block">
+          <h5>Lorem Ipsum</h5>
+          <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+        </div>
+ -->      </div>
+      <!-- <div class="carousel-item">
+          <img class="d-block w-100" src="images/pic2.jpg" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Lorem Ipsum</h5>
+          <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+          <img class="d-block w-100" src="images/pic3.jpg" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Lorem Ipsum</h5>
+          <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+        </div>
+        </div> -->
+      </div>
+
+      <a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#theCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+
+
+      <div class="row splitout">
+        <div id="splitout1" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 center">
+          <h4>Column 1</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla at libero at finibus. Mauris dui felis, sagittis in dapibus eget, porta quis elit. Donec sodales placerat porta. Vivamus laoreet magna eget facilisis condimentum. Donec porttitor elit nibh, et mollis nunc egestas at. Vestibulum tristique vehicula ligula vel mollis. Quisque ante lectus, tincidunt maximus scelerisque in, molestie nec eros. Vestibulum finibus, lacus at gravida condimentum, tellus mauris imperdiet orci.
+          </p>
+        </div>
+        <div id="splitout2" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 center">
+          <h4>Column 2</h4>
+          <p>         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla at libero at finibus. Mauris dui felis, sagittis in dapibus eget, porta quis elit. Donec sodales placerat porta. Vivamus laoreet magna eget facilisis condimentum. Donec porttitor elit nibh, et mollis nunc egestas at. Vestibulum tristique vehicula ligula vel mollis. Quisque ante lectus, tincidunt maximus scelerisque in, molestie nec eros. Vestibulum finibus, lacus at gravida condimentum, tellus mauris imperdiet orci.
+        </p>
+        </div>
+    </div>
+    <div class="jumbotron center">
+        <h4 class="dark">Get Involved</h4>
+        <p class="dark">       
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aperiam vitae possimus laudantium quod et vero dolorem odit debitis. Numquam porro nisi quis rerum adipisci sunt ratione culpa fugiat perspiciatis.   
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet amet iure quos explicabo minima autem ipsa repellendus rem dolorum odio ullam possimus maiores animi incidunt reiciendis, sapiente nisi culpa molestias.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga facere explicabo soluta optio deleniti ut quasi totam numquam aspernatur possimus id tenetur quo labore eveniet quia quaerat, molestias ex alias?
+            <br>
+            <br>
+            <br>
+            
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla at libero at finibus. Mauris dui felis, sagittis in dapibus eget, porta quis elit. Donec sodales placerat porta. Vivamus laoreet magna eget facilisis condimentum. Donec porttitor elit nibh, et mollis nunc egestas at. Vestibulum tristique vehicula ligula vel mollis. Quisque ante lectus, tincidunt maximus scelerisque in, molestie nec eros. Vestibulum finibus, lacus at gravida condimentum, tellus mauris imperdiet orci.
+    </p>
+    <button type="button" class="btn btn-primary">Contribute</button>
+    </div>
+    <div id="joinsection" class="row">
+        <div class="col-lg-6 offset-lg-6 col-md-6 offset-md-6 col-sm-12 col-xs-12 transbackground">
+          <h4>Column 2</h4>
+          <p>         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla at libero at finibus. Mauris dui felis, sagittis in dapibus eget, porta quis elit. Donec sodales placerat porta. Vivamus laoreet magna eget facilisis condimentum. Donec porttitor elit nibh, et mollis nunc egestas at. Vestibulum tristique vehicula ligula vel mollis. Quisque ante lectus, tincidunt maximus scelerisque in, molestie nec eros. Vestibulum finibus, lacus at gravida condimentum, tellus mauris imperdiet orci.
+        </p>
+        </div>
+    </div>
+    
+    
+  <div class="container-fluid">
+  <!-- <div class="centered">
+          <h2>Follow Dr Mahatme</h2>
+  </div> -->
+  <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mycol">
+          <ul>
+              <li><a href="https://www.facebook.com/drmahatme/">
+                  <span class="icon-container"><i class="fab fa-facebook-f"></i></span>
+                  <span class="text">Facebook</span>
+              </a></li>
+          </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mycol">
+          <ul>
+              <li><a href="#">
+                  <span class="icon-container"><i class="fab fa-twitter"></i></span>
+                  <span class="text">Twitter</span>
+              </a></li>
+          </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mycol">
+          <ul>
+              <li><a href="https://www.linkedin.com/company/bjp4india/">
+                  <span class="icon-container"><i class="fab fa-linkedin"></i></span>
+                  <span class="text">LinkedIn</span>
+              </a></li>
+          </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mycol">
+            <ul>
+                <li><a href="https://www.youtube.com/user/BJP4India">
+                    <span class="icon-container"><i class="fab fa-youtube"></i></span>
+                    <span class="text">Youtube</span>
+                </a></li>
+            </ul>
+        </div>
+  </div>
+</div>
+  
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
